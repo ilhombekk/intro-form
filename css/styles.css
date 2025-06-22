@@ -1,3 +1,55 @@
+/* fonts  */
+
+@font-face {
+    font-family: 'Inter 18pt';
+    src: url("../fonts/Inter18pt-Medium.woff2") format('woff2'),
+    url('../fonts/Inter18pt-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter 18pt';
+    src: url('../fonts/Inter18pt-SemiBold.woff2') format('woff2'),
+    url('../fonts/Inter18pt-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter 18pt';
+    src: url('../fonts/Inter18pt-Regular.woff2') format('woff2'),
+    url('../fonts/Inter18pt-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter 18pt';
+    src: url('../fonts/Inter18pt-Bold.woff2') format('woff2'),
+    url('../fonts/Inter18pt-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+*:focus {
+    outline: 2px dotted var(--pruple);
+    outline-offset: 3px;
+}
+
+/* costom props */
+:root {
+    --body-bg: #f1f4ff;
+    --green: #4dc490;;
+    --pruple: #655af2;
+    --red: #f03535;
+    --text-color: #ffffff;
+}
+
 html {
     box-sizing: border-box;
     height: 100%;
@@ -19,8 +71,8 @@ body{
     font-size: 16px;
     line-height: 1,5;
     height: 100%;
-    background-color: #fff;
-    color: #222;
+    background-color:var(--body-bg);
+    color: var(--text-color);
 }
 
 img {
@@ -30,13 +82,125 @@ img {
 
 .container {
     width: 100%;
-    max-width: 1200px;
-    padding-left: 50px;
-    padding-right: 50px;
+    max-width: 1192px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-left: auto;
     margin-left: auto;
 } 
 
 .main-content {
     flex-grow: 1;
+}.intro-page {
+    display: flex;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 570px;
+    border-radius: 20px;
+    color:var(--text-color)
+}
+.hero-main {
+    flex-grow: 1;
+    padding: 55px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-image: url(../img/2804ae2ef597b5a7793626661423188d5c4c263f.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.hero-badge {
+    border: 1px solid var(--text-color);
+    padding: 5px 15px;
+    margin-bottom: 60px;
+    border-radius: 41px;
+    font-size: 14px;
+    line-height: normal;
+    font-weight: 500;
+}
+.hero-heading {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 36px;
+    line-height: 46px;
+}
+.hero-text {
+    margin: 0;
+    font-size: 15px;
+    line-height: 26px;
+}
+.hero-bottom {
+    padding: 28px;
+    font-size: 19px;
+    text-align: center;
+    background-color: var(--green);
+    border-radius: 0 0 30px 30px;
+}
+/* signup */
+.signup-form {
+    width: 100%;
+    max-width: 570px;
+    padding: 55px 60px 40px;
+    margin-left: 12px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #fff;
+}
+.signup-form-heading {
+    margin-top: 0;
+    margin-bottom: 65px;
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: 600;
+    color: #000;
+}
+.signup-form-fields {
+    display: flex;
+    flex-direction: column;
+}
+.signup-form-field {
+    padding-top: 15px;
+    padding-bottom: 14px;
+    border-bottom: 14px;
+    border: 0;
+    border-bottom: 1px solid #555;
+}
+.signup-form-field:focus {
+    border-color: #000;
+    font-weight: 600;
+    color: #000;
+}
+.signup-form-field:not(:last-child) {
+    margin-bottom: 20px;
+}
+.signup-form-submit {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    border: 0;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    background-color: var(--pruple);
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+.signup-form-notice {
+    font-size: 11px;
+    line-height: 15px;
+    text-align: center;
+    color: #000;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.signup-form-notice-link {
+    font-weight: 500;
+    color: var(--red);
 }
